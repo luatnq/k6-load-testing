@@ -33,6 +33,12 @@ services:
 
   k6:
     image: grafana/k6:latest
+
+    # Use the local Dockerfile to build the image if you want to use extensions k6
+    # build:
+    #   context: .
+    #   dockerfile: Dockerfile
+    container_name: k6
     networks:
       - k6
     ports:
